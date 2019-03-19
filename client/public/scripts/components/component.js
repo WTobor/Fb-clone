@@ -1,4 +1,6 @@
-export class Component {
+import { EventEmitter } from "events";
+
+export class Component extends EventEmitter {
     template = () => '';
     data = null;
 

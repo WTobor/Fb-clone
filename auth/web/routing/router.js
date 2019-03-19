@@ -24,10 +24,10 @@ router.post("/login", (req, res) =>{
     let users = loadJSON('./fakes/users.json');
     const user = users.find((user) => user.login == req.body.login && user.password === encode(req.body.password));
     if (user) {
-        res.send(JSON.stringify(`welcome ${req.body.login}`));
+        res.json(true);
     }
     else {
-        res.send(JSON.stringify(`login failed`));
+        res.json(false);
     }
 });
 
