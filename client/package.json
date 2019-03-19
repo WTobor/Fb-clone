@@ -13,17 +13,18 @@
   "license": "MIT",
   "devDependencies": {
     "cors": "^2.8.5",
+    "express": "^4.16.4",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10",
     "page": "^1.11.4",
-    "parcel": "^1.12.2"
+    "parcel": "^1.12.2",
+    "router": "^1.3.3"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-transform-runtime": "^7.3.4",
-    "dotenv": "^7.0.0",
-    "express": "^4.16.4"
+    "dotenv": "^7.0.0"
   },
   "babel": {
     "plugins": [

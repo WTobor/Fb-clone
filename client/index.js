@@ -1,37 +1,13 @@
-const express = require('express');
 const cors = require('cors');
+const express = require('express');
+
 const app = express();
-const fetch = require('node-fetch');
+
 require('dotenv').config({path: './config/client.env'});
 
 app.use(cors());
-app.get("/", (req, res) => {
-    return login()
-    .then((data) => res.end(JSON.stringify(`hello client - ${data}`)));
-});
 
-app.get("/posts", (req, res) => {
-    return fetch('http://localhost:3001/posts')
-    .then(data => data.json())
-    .then((data) => res.end(JSON.stringify(data)));
-});
-
-
-const login = async () => {
-    console.log("login");
-    const data = {login: "aaa", password: "paaa"};
-    var user = new URLSearchParams(data);
-
-    const result = await fetch('http://localhost:3002/login', {method: "POST", body: user});
-    return result.json();
-};
-
-app.get("/posts/:id", (req, res) => {
-    const postId = req.params.id;
-    const post = posts.find((post) => post.id === postId);
-    return res.end(JSON.stringify(post));
-});
-app.get("*", (req, res) => res.end("error"));
+require('./web/routing/router')(app);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server has started on port ${process.env.PORT}...`);
