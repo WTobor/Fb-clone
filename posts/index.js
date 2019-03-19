@@ -3,6 +3,8 @@ const fs = require('fs');
 const cors = require('cors');
 const chokidar = require('chokidar');
 
+require('dotenv').config({path: './config/posts.env'});
+
 const app = express();
 
 function loadJSON(path) {
@@ -28,7 +30,6 @@ app.get("/posts/:id", (req, res) =>{
 });
 app.get("*", (req, res) => res.end("error"));
 
-const port = 3001;
-app.listen(port, () => {
-    console.log(`Server has started on port ${port}...`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server has started on port ${process.env.PORT}...`);
 });

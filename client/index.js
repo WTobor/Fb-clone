@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const fetch = require('node-fetch');
+require('dotenv').config({path: './config/client.env'});
 
 app.use(cors());
 app.get("/", (req, res) => res.end(JSON.stringify("hello")));
@@ -18,7 +19,6 @@ app.get("/posts/:id", (req, res) => {
 });
 app.get("*", (req, res) => res.end("error"));
 
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server has started on port ${port}...`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server has started on port ${process.env.PORT}...`);
 });
