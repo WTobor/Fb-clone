@@ -1,16 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-
-const posts = [
-    {id: 'aaa', body: 'post number 1'},
-    {id: 'bbb', body: 'post number 2'},
-    {id: 'ccc', body: 'post number 3'},
-];
+const fetch = require('node-fetch');
 
 app.use(cors());
 app.get("/", (req, res) => res.end(JSON.stringify("hello")));
-app.get("/posts", (req, res) => res.end(JSON.stringify(posts)));
+app.get("/posts", (req, res) => {
+    return fetch('http://localhost:3001/posts')
+    .then(data => data.json())
+    .then((data) => res.end(JSON.stringify(data)))
+
+});
 app.get("/posts/:id", (req, res) => {
     const postId = req.params.id;
     const post = posts.find((post) => post.id === postId);

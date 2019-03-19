@@ -18,13 +18,6 @@ page('/', () => {
     component.render($outlet);
 })
 
-// page('/posts', () => {
-//     const $outlet = document.querySelector('router-outlet');
-
-//     const component = new PostListComponent();
-//     component.render($outlet);
-// })
-
 page('/posts/:id', (context) => {
     const id = context.params;
     const $outlet = document.querySelector('router-outlet');

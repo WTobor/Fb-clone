@@ -3,7 +3,7 @@ import {Component} from './component';
 export class PostComponent extends Component {
     template = () => `
     <div class="post">
-        <a href="/posts/${this.data.id}/>
+        <a href="/posts/${this.data.id}">link</a>
         ${this.data.body}
     </div>
     `;

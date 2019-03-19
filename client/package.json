@@ -13,6 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "cors": "^2.8.5",
+    "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10",
     "page": "^1.11.4",
     "parcel": "^1.12.2"
