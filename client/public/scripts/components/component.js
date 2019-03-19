@@ -8,12 +8,8 @@ export class Component {
     }
 
     render($holder){
-        this.$element = this.compile(this.getTemplate());
+        this.$element = this.compile(this.template());
         $holder.appendChild(this.$element);
-    }
-
-    getTemplate() {
-        return this.template;
     }
 
     setData(data) {

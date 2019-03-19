@@ -1,13 +1,12 @@
 import {RootComponent} from './components/root.component';
-import {getPosts} from './services/post.service';
+import {start} from './router';
 
 async function bootstrap() {
-    let posts = await getPosts();
-    console.log(posts);
-
     const $page = document.querySelector("#page");
     const root = new RootComponent();
     root.render($page);
+
+    start();
 }
 
 const testButton = document.querySelector("#test");

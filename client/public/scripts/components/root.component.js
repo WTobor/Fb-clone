@@ -1,16 +1,11 @@
 import {Component} from './component';
-import { PostListComponent } from './post-list.component';
 
 export class RootComponent extends Component {
     $element = null;
-    template = `
-        <div class="root"></div>
+    template = () => `
+        <div class="root">
+            <h1>Facebook</h1>
+            <router-outlet></router-outlet>
+        </div>
     `;
-
-    render($holder){
-        super.render($holder);
-
-        const component = new PostListComponent();
-        component.render(this.$element);
-    }
 }
