@@ -12,6 +12,7 @@
   "author": "Weronika Tobor",
   "license": "MIT",
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^1.18.10",
     "parcel": "^1.12.2"
   },

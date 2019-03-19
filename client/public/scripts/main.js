@@ -1,9 +1,5 @@
 import {RootComponent} from './components/root.component';
-
-async function getPosts() {
-    const response = await fetch('http://localhost:3000/posts');
-    return response.json();
-}
+import {getPosts} from './services/post.service';
 
 async function bootstrap() {
     let posts = await getPosts();

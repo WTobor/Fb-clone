@@ -4,15 +4,17 @@ import {getPosts} from '../services/post.service';
 
 export class PostListComponent extends Component {
     template = `
-    <div class="postList"></div>
+        <div class="postList"></div>
     `;
 
     async render($holder) {
         super.render($holder);
 
         const posts = await getPosts();
-        posts.forEach(element => {
+        debugger;
+        posts.forEach(post => {
             const component = new PostComponent();
+            component.setData(post);
             component.render(this.$element);
         });
     }
