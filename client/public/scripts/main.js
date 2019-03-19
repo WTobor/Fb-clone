@@ -9,5 +9,5 @@ async function bootstrap() {
     start();
 }
 
-const testButton = document.querySelector("#test");
-testButton.addEventListener("click", (res) => bootstrap());
+const postsButton = document.querySelector("#posts");
+postsButton.addEventListener("click", (res) => bootstrap());

@@ -18,7 +18,7 @@ chokidar.watch('./fakes/*').on('all', () => {
 let posts = loadJSON('./fakes/posts.json');
 
 app.use(cors());
-app.get("/", (req, res) => res.end(JSON.stringify("hello")));
+app.get("/", (req, res) => res.end(JSON.stringify("hello posts")));
 app.get("/posts", (req, res) =>{
     res.end(JSON.stringify(this.posts));
 });

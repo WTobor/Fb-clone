@@ -1,0 +1,8 @@
+[
+    {"login": "aaa", "password": "paaa"},
+    {"login": "bbb", "password": "pbbb"},
+    {"login": "ccc", "password": "pccc"},
+    {"login": "ddd", "password": "pddd"},
+    {"login": "eee", "password": "peee"},
+    {"login": "fff", "password": "pfff"}
+]
