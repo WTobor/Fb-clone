@@ -5,13 +5,13 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
     return login()
-    .then((data) => res.end(JSON.stringify(`hello client - ${data}`)));
+        .then((data) => res.end(JSON.stringify(`hello client - ${data}`)));
 });
 
 router.get("/posts", (req, res) => {
     return fetch('http://localhost:3001/posts')
-    .then(data => data.json())
-    .then((data) => res.end(JSON.stringify(data)));
+        .then(data => data.json())
+        .then((data) => res.end(JSON.stringify(data)));
 });
 
 
@@ -29,6 +29,7 @@ router.get("/posts/:id", (req, res) => {
     const post = posts.find((post) => post.id === postId);
     return res.end(JSON.stringify(post));
 });
+
 router.get("*", (req, res) => res.end("error"));
 
 module.exports = (app) => {

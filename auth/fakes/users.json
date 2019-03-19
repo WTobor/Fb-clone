@@ -1,8 +1,8 @@
 [
-    {"login": "aaa", "password": "paaa"},
-    {"login": "bbb", "password": "pbbb"},
-    {"login": "ccc", "password": "pccc"},
-    {"login": "ddd", "password": "pddd"},
-    {"login": "eee", "password": "peee"},
-    {"login": "fff", "password": "pfff"}
+    {"login": "aaa", "password": "f58c885c1160a3f80f12b3e988d10286314117ad9d27b2582b889b349b0c7d44"},
+    {"login": "bbb", "password": "43bb9d9672a915744da8b4c0f83960147e9f552a0af6626fb2a0a2f45848c2f1"},
+    {"login": "ccc", "password": "7e251e11542cbd618c1b9d0f00d0c4caec6813b59243bcd498c4a4c2de24583a"},
+    {"login": "ddd", "password": "54966000388063a362e3f3273b9994e938c2569fd5282f38a8d9de1fdc98b713"},
+    {"login": "eee", "password": "3ee392561cfc9e9512f072dd9fcbd97d3304713c4c496fcb9d6af67207bb8d99"},
+    {"login": "fff", "password": "f14c31effbfcc549b66a258646df27f1e5528082919527445ae9c635af37fe61"}
 ]
