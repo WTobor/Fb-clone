@@ -22,8 +22,6 @@ router.get("/posts/:id", (req, res) => {
         });
 });
 
-router.get("*", (req, res) => res.end("error"));
-
 module.exports = (app) => {
     app.use(router);
 }

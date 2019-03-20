@@ -7,6 +7,7 @@ const app = express();
 
 require('dotenv').config({path: path.join(__dirname, './config/client.env')});
 
+app.use(express.static(path.join(__dirname, './dist')));
 app.use(morgan('dev'));
 app.use(cors());
 

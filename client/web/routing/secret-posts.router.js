@@ -16,8 +16,6 @@ router.post("/posts/:id", (req, res) => {
         .then((data) => res.json(data));
 });
 
-router.get("*", (req, res) => res.end("error"));
-
 module.exports = (app) => {
     app.use('/secret', router);
 }
