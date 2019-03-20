@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  auth-service:
+    build: './auth'
+
+  client-service:
+    build: './client'
+    ports:
+      - 5000:3000
+
+  posts-service:
+    build: './posts'
+    
+  # mongo-service:
