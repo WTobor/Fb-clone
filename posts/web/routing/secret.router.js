@@ -15,11 +15,11 @@ chokidar.watch('./fakes/*').on('all', () => {
     posts = loadJSON('./fakes/secret-posts.json');
 })
 
-router.get("/", authenticate, (req, res) =>{
+router.get("/", () => authenticate, (req, res) =>{
     res.json(posts);
 });
 
-router.get("/:id", authenticate, (req, res) =>{
+router.get("/:id", () => authenticate, (req, res) =>{
     const postId = req.params.id;
     const post = posts.find((post) => post.id === postId);
     res.json(post);

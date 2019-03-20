@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.end(JSON.stringify(`hello client - ${data}`))
+    res.end(JSON.stringify(`hello client`))
 });
 
 router.get("/posts", (req, res) => {

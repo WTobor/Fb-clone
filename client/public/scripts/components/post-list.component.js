@@ -24,7 +24,7 @@ export class PostListComponent extends Component {
             this.emit('auth-status-changed', {status});
         })
 
-        if(!$status.checked) {
+        if($status.checked) {
             posts = await getSecretPosts();
         }
         else {
