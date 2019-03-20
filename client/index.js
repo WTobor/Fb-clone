@@ -2,14 +2,18 @@ const cors = require('cors');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const helmet = require('helmet');
+
 
 const app = express();
 
 require('dotenv').config({path: path.join(__dirname, './config/client.env')});
 
+app.use(helmet());
 app.use(express.static(path.join(__dirname, './dist')));
 app.use(morgan('dev'));
 app.use(cors());
+
 
 require('./web/routing/posts.router')(app);
 require('./web/routing/secret-posts.router')(app);
