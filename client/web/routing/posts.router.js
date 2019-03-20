@@ -14,6 +14,7 @@ router.get("/posts", (req, res) => {
 });
 
 router.get("/posts/:id", (req, res) => {
+    debugger;
     const postId = req.params.id;
     fetch(`http://localhost:3001/posts/${postId}`)
         .then(data => data.json())

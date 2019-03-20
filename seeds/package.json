@@ -1,0 +1,15 @@
+{
+  "name": "seeds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "posts.js",
+  "scripts": {
+    "start": "node posts.js"
+  },
+  "author": "Weronika Tobor",
+  "license": "MIT",
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "mongoose": "^5.4.19"
+  }
+}

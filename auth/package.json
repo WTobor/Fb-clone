@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jasmine web/**/*.spec.js"
   },
   "keywords": [],
   "author": "Weronika Tobor",
@@ -16,7 +17,10 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "fs": "0.0.1-security",
+    "jasmine": "^3.3.1",
     "morgan": "^1.9.1",
-    "node-fetch": "^2.3.0"
+    "nock": "^10.0.6",
+    "node-fetch": "^2.3.0",
+    "supertest": "^4.0.2"
   }
 }

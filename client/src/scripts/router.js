@@ -19,7 +19,7 @@ page('/', () => {
 })
 
 page('/posts/:id', (context) => {
-    const id = context.params;
+    const id = context.params.id;
     const $outlet = document.querySelector('router-outlet');
 
     const component = new PostComponent();
