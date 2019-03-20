@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "Weronika Tobor",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }

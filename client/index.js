@@ -1,10 +1,13 @@
 const cors = require('cors');
 const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 
-require('dotenv').config({path: './config/client.env'});
+require('dotenv').config({path: path.join(__dirname, './config/client.env')});
 
+app.use(morgan('dev'));
 app.use(cors());
 
 require('./web/routing/posts.router')(app);

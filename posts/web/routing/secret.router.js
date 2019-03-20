@@ -1,7 +1,7 @@
 const express = require('express');
 const chokidar = require('chokidar');
 const fs = require('fs');
-const authenticate = require('../middleware/authenticate');
+const {authenticate} = require('../middleware/authenticate');
 
 const router = express.Router();
 
@@ -15,11 +15,13 @@ chokidar.watch('./fakes/*').on('all', () => {
     posts = loadJSON('./fakes/secret-posts.json');
 })
 
-router.get("/", () => authenticate, (req, res) =>{
+router.post("/posts", authenticate, (req, res) =>{
+    console.log('get secret posts');
     res.json(posts);
 });
 
-router.get("/:id", () => authenticate, (req, res) =>{
+router.post("/:id", authenticate, (req, res) =>{
+    console.log('get secret post');
     const postId = req.params.id;
     const post = posts.find((post) => post.id === postId);
     res.json(post);

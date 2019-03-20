@@ -14,11 +14,13 @@ chokidar.watch('./fakes/*').on('all', () => {
     posts = loadJSON('./fakes/posts.json');
 })
 
-router.get("/", (req, res) =>{
+router.get("/posts", (req, res) =>{
+    console.log('get posts');
     res.json(posts);
 });
 
 router.get("/:id", (req, res) =>{
+    console.log('get post');
     const postId = req.params.id;
     const post = posts.find((post) => post.id === postId);
     res.json(post);

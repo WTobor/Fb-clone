@@ -25,9 +25,11 @@ export class PostListComponent extends Component {
         })
 
         if($status.checked) {
+            console.log('get secret posts');
             posts = await getSecretPosts();
         }
         else {
+            console.log('get posts');
             posts = await getPosts();
         }
 

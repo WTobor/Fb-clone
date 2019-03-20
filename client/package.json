@@ -5,20 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "watch": "parcel serve public/index.html"
+    "dev": "cross-env DEBUG=* nodemon index.js",
+    "watch": "webpack -w",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "Weronika Tobor",
   "license": "MIT",
   "devDependencies": {
+    "@babel/runtime": "^7.4.0",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.10",
     "page": "^1.11.4",
-    "parcel": "^1.12.2",
-    "router": "^1.3.3"
+    "router": "^1.3.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
