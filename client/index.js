@@ -17,6 +17,7 @@ app.use(cors());
 
 require('./web/routing/posts.router')(app);
 require('./web/routing/secret-posts.router')(app);
+require('./web/routing/debug.router')(app);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server has started on port ${process.env.PORT}...`);
